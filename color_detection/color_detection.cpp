@@ -6,9 +6,6 @@
 using namespace std;
 using namespace cv;
 
-Mat orgImg;
-Mat dst, cdst;
-
 int main()
 {
 	VideoCapture vid(0);
@@ -22,13 +19,13 @@ int main()
 	}
 	namedWindow("control", CV_WINDOW_AUTOSIZE);
 
-	int Hmindeg = 170;
+	int Hmindeg = 0;
 	int Hmaxdeg = 179;
 
-	int Smindeg = 150;
+	int Smindeg = 192;
 	int Smaxdeg = 255;
 
-	int Vmindeg = 60;
+	int Vmindeg = 90;
 	int Vmaxdeg = 255;
 
 	createTrackbar("minH", "control", &Hmindeg, 179);
@@ -39,8 +36,7 @@ int main()
 
 	createTrackbar("minV", "control", &Vmindeg, 255);
 	createTrackbar("maxV", "control", &Vmaxdeg, 255);
-
-												
+										
 	while (true)
 	{
 
