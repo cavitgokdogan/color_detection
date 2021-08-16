@@ -65,12 +65,6 @@ int main()
 		dilate(isres, isres, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)));
 		erode(isres, isres, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)));		       
 
-		Moments konum = moments(isres);
-
-		double yeksen = konum.m01;
-		double xeksen = konum.m10;	
-		double alan = konum.m00;
-
 		imshow("Black and white", isres);
 		imshow("Original", frame);
 
