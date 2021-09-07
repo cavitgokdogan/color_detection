@@ -31,7 +31,7 @@ int main()
 	createTrackbar("minH", "control", &Hmindeg, 179);
 	createTrackbar("maxH", "control", &Hmaxdeg, 179);
 
-	createTrackbar("minS", "control", &Smindeg, 255);
+	createTrackbar("minS", "control", &Smindeg, 255);			// We create bars to be able to change color values.
 	createTrackbar("maxS", "control", &Smaxdeg, 255);
 
 	createTrackbar("minV", "control", &Vmindeg, 255);
